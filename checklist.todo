@@ -1,0 +1,81 @@
+ 
+FastAPI (Backend):
+1. Python Fundamentals:
+    ✔ Variables @done(26-07-24 12:18)
+    ✔ Data Types @done(26-07-24 12:18)
+    ✔ Functions @done(26-07-24 12:18)
+    ✔ Exception Handling @done(26-07-24 13:36)
+    ✔ Classes & OOP @done(26-07-24 13:36)
+    ✔ Virtual Environments @done(26-07-24 12:18)
+    ✔ Package Management (pip) @done(26-07-24 12:18)
+
+2. FastAPI Basics:
+    ✔ FastAPI Architecture @done(26-07-24 13:44)
+    ✔ Project Structure @done(26-07-24 12:21)
+    ✔ APIRouter @done(26-07-24 12:18)
+    ✔ Request Handling @done(26-07-24 12:22)
+    ✔ Response Handling @done(26-07-24 12:22)
+
+3. Pydantic:
+    ✔ Request Models @done(26-07-24 13:44)
+    ✔ Response Models @done(26-07-24 13:44)
+    ✔ Validation @done(26-07-24 18:42)
+    ✔ Field Constraints @done(26-07-24 12:18)
+    ✔ Nested Models @done(26-08-06 18:46)
+
+4. API Development:
+    ✔ GET APIs @done(26-07-24 12:18)
+    ✔ POST APIs @done(26-07-24 12:18)
+    ✔ PUT APIs @done(26-07-24 12:18)
+    ✔ DELETE APIs @done(26-07-24 12:18)
+    ✔ Path Parameters @done(26-07-24 18:41)
+    ✔ Headers @done(26-07-24 18:42)
+    ✔ Query Parameters @done(26-07-25 17:17)
+
+5. Dependency Injection:
+    ✔ Depends() @done(26-07-24 12:19)
+    ✔ Shared Dependencies @done(26-08-06 18:46)
+    ✔ Reusable Services @done(26-07-25 13:27)
+
+6. Database:
+    ✔ SQL Fundamentals @done(26-07-24 12:19)
+    ☐ PostgreSQL
+    ✔ SQLAlchemy @done(26-07-24 12:19)
+    ✔ Models @done(26-07-24 13:37)
+    ✔ CRUD Operations @done(26-07-24 12:19)
+    ✔ Relationships @done(26-07-24 12:22)
+
+7. Authentication & Authorization:
+    ✔ JWT Authentication @done(26-07-24 18:41)
+    ✔ OAuth2 @done(26-07-24 18:41)
+    ✔ Role-Based Access @done(26-07-24 18:41)
+
+8. Middleware:
+    ☐ Logging Middleware
+    ✔ CORS @done(26-10-01 11:39)
+    ☐ Custom Middleware
+    ✔ Exception Handlers @done(26-07-24 12:19)
+
+9. Async Programming:
+    ✔ async/await @done(26-07-24 12:19)
+    ✔ Async Routes @done(26-07-24 12:19)
+    ✔ Async Database Calls @done(26-07-24 12:19)
+    ✔ Performance Considerations @done(26-08-06 18:46)
+
+10. File Handling:
+    ✔ File Upload @done(26-07-24 21:26)
+    ✔ File Download @done(26-07-24 21:26)
+
+11. Testing:
+    ✔ Pytest @done(26-10-01 11:39)
+    ✔ TestClient @done(26-10-01 11:39)
+    ✔ Mocking @done(26-10-01 11:39)
+    ☐ Integration Testing
+
+12. Production Readiness:
+    ✔ Environment Variables @done(26-07-24 12:19)
+    ☐ Configuration Management
+    ☐ Logging
+    ☐ Error Handling
+    ☐ Security Best Practices
+ 
