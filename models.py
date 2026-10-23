@@ -49,7 +49,12 @@ class Post(Base):
         DateTime(timezone=True),
         default=lambda: datetime.now(UTC),
     )
-
+    
+    likes: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    '''
+    default: python side paramter
+    server_default: server side default 
+    '''
     author: Mapped[User] = relationship(back_populates='posts')
 
 

@@ -3,19 +3,28 @@
 
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase
+from config import settings
 
-SQLALCHEMY_DATABASE_URL = 'sqlite+aiosqlite:///./blog.db'
 
+'''
+# SQLite database settings
+SQLALCHEMY_DATABASE_URL = 'sqlite+aiosqlite:///./blog.db' # SQLite database 
 engine = create_async_engine(
     SQLALCHEMY_DATABASE_URL,
     connect_args={"check_same_thread": False},
 )
-
+'''
 # SessionLocal = sessionmaker(
 #     autocommit=False, 
 #     autoflush = False,
 #     bind=engine
 # )
+
+
+# Postgres
+engine = create_async_engine(
+    settings.database_url
+)
 
 AsycnSessionLocal = async_sessionmaker(
     engine,

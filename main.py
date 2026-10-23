@@ -26,8 +26,10 @@ from config import settings
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     # startup
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    # async with engine.begin() as conn:
+        # await conn.run_sync(Base.metadata.create_all) # creation system 
+    
+
     yield
 
     # shutdown
@@ -55,7 +57,7 @@ async def home(request: Request, db: Annotated[AsyncSession, Depends(get_db)]):
         select(models.Post)
         .options(selectinload(models.Post.author))
         .order_by(models.Post.date_posted.desc())
-        .limit(settings.post_per_page)
+        .limit(settings.posts_per_page),
     )
 
     posts = result.scalars().all()

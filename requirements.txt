@@ -1,4 +1,4 @@
-fastapi
+fastapi[standard]
 sqlalchemy
 aiosqlite
 greenlet
@@ -7,3 +7,6 @@ pyjwt
 pydantic-settings
 pillow
 aiosmtplib
+alembic
+boto3
+psycopg[binary]
