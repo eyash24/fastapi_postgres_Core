@@ -11,7 +11,7 @@ from fastapi.exception_handlers import (
     request_validation_exception_handler,
 )
 
-from sqlalchemy import select, func
+from sqlalchemy import select, func, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
@@ -29,7 +29,6 @@ async def lifespan(_app: FastAPI):
     # async with engine.begin() as conn:
         # await conn.run_sync(Base.metadata.create_all) # creation system 
     
-
     yield
 
     # shutdown
@@ -46,6 +45,16 @@ templates = Jinja2Templates(directory='templates')
 app.include_router(users.router, prefix='/api/users', tags=['users'])
 app.include_router(posts.router, prefix='/api/posts', tags=['posts'])
 
+app.get("/health")
+async def healthcheck(db: Annotated[AsyncSession, Depends(get_db)]):
+    try:
+        await db.execute(text("SELECT 1"))
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Database Unavailable"
+        ) from exc
+    return {"status":"healthy"}
 
 @app.get('/', include_in_schema=False, name='home')
 @app.get('/posts', include_in_schema=False, name='posts')
